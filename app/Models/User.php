@@ -17,17 +17,26 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
+    // fungsi fillable untuk mengizinkan field apa saja yang bisa diinsert ke tabel database 
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
 
+    // guarded fungsinya untuk melindungi field agar tidak bisa di modifikasi dari luar
+    // protected $guarded = [
+    //     'id'
+    // ] 
+
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array
      */
+
+    // menyembunyikan field" yang tidak ditampilkan saat distribusi data 
     protected $hidden = [
         'password',
         'remember_token',
